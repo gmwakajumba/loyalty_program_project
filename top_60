@@ -1,0 +1,14 @@
+SELECT DISTINCT(customer.customer_id), first_name, last_name, COUNT(rental_id) AS transactions,
+SUM(amount) AS total_spent, (
+CASE 
+	WHEN SUM(amount) BETWEEN 0 AND 150 THEN 'filmnatic'
+	WHEN SUM(amount) BETWEEN 151 AND 200 THEN 'filmthusiast'
+	WHEN SUM(amount) >= 200 THEN 'afilmcianado'
+	ELSE NULL
+	END
+) AS loyalty_program FROM customer
+JOIN payment
+ON payment.customer_id = customer.customer_id
+GROUP BY customer.customer_id
+ORDER BY SUM(amount) DESC
+LIMIT 60
