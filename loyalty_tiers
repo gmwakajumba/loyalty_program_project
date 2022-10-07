@@ -11,4 +11,4 @@ JOIN payment
 ON payment.customer_id = customer.customer_id
 GROUP BY customer.customer_id
 HAVING SUM(amount) >= 125
-ORDER BY SUM(amount) DESC
+ORDER BY SUM(amount) DESC;
