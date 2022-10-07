@@ -1,2 +1,2 @@
 # loyalty_program_project
-This project started as an analysis of the Top 60 highest-paying customers (top 10%) of a DVD Rental Store’s database. Once the Top 60 clients are extracted, I will analyze what percentage of them rented multiple dvds in one day. The idea is to propose a loyalty program to encourage multiple rentals in one visit.
+This project is an analysis of the highest-paying customers of a DVD Rental Store’s database. I decided to establish three tiers based on total amount spent.
